@@ -6,6 +6,13 @@ function init() {
     typeSpeed: 50,
     loop: true,
   });
-  
+
+  // I implemented scroll reveal animation using scrollreveal API: https://scrollrevealjs.org/api/reveal.html
+  ScrollReveal().reveal('.ScrollReveal', {
+    delay:300,
+    duration:600,
+    origin:'top',  
+    reset: true          
+  });
 }
 document.addEventListener("DOMContentLoaded", init);

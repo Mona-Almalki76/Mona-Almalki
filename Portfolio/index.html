@@ -1,29 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mona's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./scripts/main.js"></script>
-</head>
-<body>
-    <video class="back-vid" autoplay loop muted plays-inline src="videos/galaxy.mp4"></video>
+  </head>
+  <body>
+    <video
+      class="back-vid"
+      autoplay
+      loop
+      muted
+      plays-inline
+      src="videos/galaxy.mp4"
+    ></video>
     <header>
-        <div class="rightContainer">
-            <img src="./images/MyLogo.png">
-        </div>
-        <div class="leftContainer">
-            <h1>Hey, It's <span>Mona</span></h1>
-            <h2>I'm <span class="professionalTitle"></span></h2>
-            <p class="Overview">"Passionate about building clean, scalable, and user-centered web applications with a passion for technology, creating solutions that solve real-world problems"</p>
-        </div>
+      <div class="rightContainer">
+        <img src="./images/MyLogo.png" />
+      </div>
+      <div class="leftContainer">
+        <h1>Hey, It's <span>Mona</span></h1>
+        <h2>I'm <span class="professionalTitle"></span></h2>
+        <p class="Overview">
+          "Passionate about building clean, scalable, and user-centered web
+          applications with a passion for technology, creating solutions that
+          solve real-world problems"
+        </p>
+      </div>
     </header>
+
     <section class="aboutMe">
+      <div class="leftContainer">
+        <h1 class="ScrollReveal heading">Education</h1>
+        <p class="ScrollReveal">
+          <span class="eduDegree">B.Sc.</span> in Information Technology | King
+          Abdulaziz University, Jeddah<br /><br />
+          <span>GPA</span> 4.54<br /><br />
+          <span>Second-Class Honors Graduated</span> May 2025
+        </p>
+      </div>
+      <div class="rightContainer">
+        <h1 class="ScrollReveal heading">Experience</h1>
+        <p class="ScrollReveal">
+          Cooperative Trainee | Saudia Airlines, Jeddah<br /><br />June 2024 –
+          August 2024
+        </p>
+        <ul class="Trainee">
+          <li class="ScrollReveal">
+            Trained in software development and IT operations in a corporate
+            environment.
+          </li>
+          <li class="ScrollReveal">
+            Developed problem-solving and technical skills through real-world
+            projects.
+          </li>
+          <li class="ScrollReveal">
+            Gained hands-on experience with database management, web
+            development, and IT tools.
+          </li>
+        </ul>
+      </div>
+      <div class="bottomContainer">
+        <h1 class="ScrollReveal heading">Skills</h1>
+        <!-- From Uiverse.io by Cobp -->
+        <div class="ScrollReveal container-items">
+          <button
+            class="item-skill"
+            style="background-image: url('images/html.png'); background-size: cover;"
+            skill-name="HTML"
+          ></button>
+          <button
+            class="item-skill"
+            style="background-image: url('images/css.png'); background-size: cover;"
+            skill-name="css"
+          ></button>
+            <button
+            class="item-skill"
+            style="background-image: url('images/js.png'); background-size: cover;"
+            skill-name="JavaScript"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/java.png'); background-size: cover;"
+            skill-name="Java"
+          ></button>
+          <button
+            class="item-skill"
+            style="background-image: url('images/python.png'); background-size: cover;"
+            skill-name="Python"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/react.png'); background-size: cover;"
+            skill-name="React"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/php.png'); background-size: cover;"
+            skill-name="PHP"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/mySql.png'); background-size: cover;"
+            skill-name="MySQL"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/phpMyAdmin.png'); background-size: cover;"
+            skill-name="PhpMyAdmin"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/GitHub.png'); background-size: cover;"
+            skill-name="GitHub"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/git.png'); background-size: cover;"
+            skill-name="Git"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/MSproject.png'); background-size: cover;"
+            skill-name="Microsoft Project"
+          ></button>
+           <button
+            class="item-skill"
+            style="background-image: url('images/figma.png'); background-size: cover;"
+            skill-name="Figma"
+          ></button>
+          <button
+            class="item-skill"
+            style="background-image: url('images/bootstrap.png'); background-size: cover;"
+            skill-name="Bootstrap"
+          ></button>
+        </div>
+      </div>
     </section>
-</body>
+
+    <section class="projects">
+
+    </section>
+  </body>
 </html>

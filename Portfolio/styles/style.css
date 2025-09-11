@@ -1,77 +1,109 @@
 body {
-        margin: 0 ; 
-        padding: 5% ;
-        font-family:"M PLUS Rounded 1c", sans-serif;
-        background: rgba(0, 0, 0, 0.7);
-;
+  margin: 0;
+  padding: 5%;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-/* https://github.com/MiladiCode/Animated-Portfolio */
-.back-vid{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    mix-blend-mode:overlay;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} 
+/* code of video: https://github.com/MiladiCode/Animated-Portfolio */
+.back-vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 img {
   width: 30vw;
+  max-width: 500px;
 }
 
-header h1{
-    color: white;
-    font-weight: lighter;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 5vh;
+header h1 {
+  color: white;
+  font-weight: lighter;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  text-align: left;
 }
-h1 span{
-font-weight: bold;
-font-size: bolder;
-color: rgb(64, 211, 216);
-font-family:"silkscreen", sans-serif;
+h1 span {
+  font-weight: bold;
+  color: rgb(64, 211, 216);
+  font-family: "silkscreen", sans-serif;
 }
-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-
-
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  max-height:100vh ;
 }
 h2 {
-      color: white;
-      font-size: 3rem;
-    }
-h2 span{
-    background: linear-gradient(
+  color: white;
+  font-size: 3rem;
+  text-align: left;
+}
+h2 span {
+  background: linear-gradient(
     90deg,
-    rgb(208, 209, 130) 0%, 
-    rgb(141, 194, 187) 50%, 
+    rgb(208, 209, 130) 0%,
+    rgb(141, 194, 187) 50%,
     rgb(56, 230, 246) 100%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-}    
-
-.Overview{
-    color: white;
-    max-width: 45vw;
-    font-size:  1.5rem;
-    font-weight: lighter;
-    text-align:justify;
+  -webkit-text-fill-color: transparent;
 }
 
-.aboutMe{
-    height: 100vh;
-    width: 100%;
+.Overview {
+  color: white;
+  width: 30em;
+  font-size: 1.5em;
+  font-weight: lighter;
+  text-align: justify;
 }
+
+.aboutMe {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  font-size: 1.2em;
+  max-height: 100vh;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(64, 211, 216);
+  font-family: "silkscreen", sans-serif;
+  text-shadow: 2px 2px 30px #0ff;
+}
+.eduDegree {
+  font-weight: bold;
+  color: #d0d182;
+}
+
+.Trainee{
+  padding-left: 1em; 
+  line-height: 1.5em;
+}
+
+/* https://www.w3schools.com/cssref/sel_marker.php */
+.Trainee li::marker{
+  color: #d0d182;
+  font-size: 1.5em;
+}
+
+
+
 
 /* Font Family ------------------------------------------*/
 /* .allerta-stencil-regular {
@@ -104,4 +136,107 @@ h2 span{
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.bottomContainer{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4%;
+}
+
+
+
+
+
+
+/* From Uiverse.io by Cobp */ 
+/* https://uiverse.io/Cobp/horrible-quail-18 */
+.container-items {
+  display: flex;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.item-skill {
+  position: relative;
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border: none;
+  outline: none;
+  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-left: -25px;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    transform: scale(1.2);
+    pointer-events: none;
+    transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(skill-name);
+    left: 50%;
+    bottom: 100%;
+    font-size: 1em;
+    line-height: 12px;
+    transform: translateX(-50%);
+    padding: 2px 0.25rem;
+    background-color: #d0d182;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  }
+
+  &:hover {
+    transform: scale(1.5);
+    z-index: 99999;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:active::after {
+    transform: scale(1.1);
+  }
+
+ 
+}
+
+.item-skill:hover + * {
+  transform: scale(1.3);
+  z-index: 9999;
+}
+
+.item-skill:hover + * + * {
+  transform: scale(1.15);
+  z-index: 999;
+}
+
+.item-skill:has(+ *:hover) {
+  transform: scale(1.3);
+  z-index: 9999;
+}
+
+.item-skill:has(+ * + *:hover) {
+  transform: scale(1.15);
+  z-index: 999;
 }
