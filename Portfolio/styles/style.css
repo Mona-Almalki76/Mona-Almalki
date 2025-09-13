@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 5%;
+  /* padding: 5%; */
   font-family: "M PLUS Rounded 1c", sans-serif;
   background: rgba(0, 0, 0, 0.4);
 }
@@ -79,6 +79,7 @@ h2 span {
   font-size: 1.3em;
   font-weight: bold;
   max-height: 100vh;
+  margin: 5%;
 }
 
 .heading {
@@ -220,6 +221,7 @@ h2 span {
   flex-direction: column;
   align-items: flex-start;
   height: 100vh;
+  margin: 5%;
 }
 /* From Uiverse.io by joe-watson-sbf */
 /* https://uiverse.io/joe-watson-sbf/rude-shrimp-21 */
@@ -283,7 +285,7 @@ h2 span {
   display: flex;
   height: 100%;
   margin: 3%;
-  margin:4em;
+  margin: 4em;
 }
 .details ul {
   display: flex;
@@ -310,6 +312,10 @@ h2 span {
   gap: 10px;
 }
 
+.details video {
+  max-width: 100%;
+  height: auto;
+}
 
 .details h2 {
   color: #d0d182;
@@ -383,4 +389,27 @@ textarea:focus {
 #my-form-button:hover {
   box-shadow: 4px 4px 50px #d0d182;
   background-color: #f8f5b8;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  height: 5%;
+  background-color: #ebebc36e;
+  padding: 0.5%;
+  font-size: larger;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+footer img {
+  width: 3vw;
+  border-radius: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }

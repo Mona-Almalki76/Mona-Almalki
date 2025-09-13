@@ -17,6 +17,7 @@ function init() {
 }
 document.addEventListener("DOMContentLoaded", init);
 
+// https://formspree.io/forms/xeoldrvz/integration 
 var form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
