@@ -216,13 +216,10 @@ h2 span {
 }
 
 .projects {
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: 100vh;
-  font-size: 1.2em;
-  max-height: 100vh;
 }
 /* From Uiverse.io by joe-watson-sbf */
 /* https://uiverse.io/joe-watson-sbf/rude-shrimp-21 */
@@ -237,9 +234,9 @@ h2 span {
 }
 
 .project {
-  height: 100%;
+  height: auto;
   flex: 1;
-  overflow: hidden;
+  overflow-y: auto;
   background: #21212100;
   cursor: pointer;
   border-radius: 2px;
@@ -254,6 +251,7 @@ h2 span {
 .project:hover {
   flex: 7;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .title {
@@ -274,6 +272,7 @@ h2 span {
   align-items: center;
   text-align: left;
   color: #ffffff;
+  font-size: 1.5em;
 }
 
 .project:hover .title {
@@ -284,8 +283,8 @@ h2 span {
   display: flex;
   height: 100%;
   margin: 3%;
+  margin:4em;
 }
-
 .details ul {
   display: flex;
   justify-content: center;
@@ -311,9 +310,6 @@ h2 span {
   gap: 10px;
 }
 
-.projectImg img {
-  width: 100%;
-}
 
 .details h2 {
   color: #d0d182;
@@ -321,4 +317,70 @@ h2 span {
   text-shadow: 2px 2px 50px #d0d182;
   font-weight: lighter;
   text-align: center;
+  font-size: 1.5em;
+}
+
+.contact {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 2em;
+  max-height: 100vh;
+  color: #d0d182;
+  font-family: "silkscreen", sans-serif;
+  text-shadow: 2px 2px 50px #d0d182;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2vh;
+  align-items: center;
+}
+
+input {
+  width: 27vw;
+  height: 3vh;
+  border: 3px solid #d0d182;
+  border-radius: 8px;
+  font-size: 0.7em;
+  outline: none;
+  display: flex;
+}
+
+input:focus {
+  box-shadow: 2px 2px 30px #d0d182;
+}
+
+textarea {
+  width: 27vw;
+  height: 15vh;
+  border: 3px solid #d0d182;
+  border-radius: 8px;
+  font-size: 0.7em;
+  outline: none;
+  display: flex;
+}
+textarea:focus {
+  box-shadow: 2px 2px 30px #d0d182;
+}
+
+#my-form-button {
+  width: auto;
+  height: auto;
+  border: 3px solid #d0d182;
+  border-radius: 8px;
+  color: #000000;
+  font-family: "silkscreen", sans-serif;
+  background-color: #d0d182;
+  font-size: 0.7em;
+}
+
+#my-form-button:hover {
+  box-shadow: 4px 4px 50px #d0d182;
+  background-color: #f8f5b8;
 }
