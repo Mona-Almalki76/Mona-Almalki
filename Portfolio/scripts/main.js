@@ -14,10 +14,7 @@ function init() {
     origin: "top",
     reset: true,
   });
-}
-document.addEventListener("DOMContentLoaded", init);
-
-// https://formspree.io/forms/xeoldrvz/integration 
+  // https://formspree.io/forms/xeoldrvz/integration 
 var form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
@@ -33,7 +30,7 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
+        status.innerHTML = "Thank you for your message. I will get back to you shortly!";
         form.reset();
       } else {
         response.json().then((data) => {
@@ -52,3 +49,5 @@ async function handleSubmit(event) {
     });
 }
 form.addEventListener("submit", handleSubmit);
+}
+document.addEventListener("DOMContentLoaded", init);

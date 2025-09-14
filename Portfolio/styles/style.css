@@ -413,3 +413,98 @@ footer a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+
+
+/* mobile devices */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.9em;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin: 5%;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .heading{
+    font-size: 2rem;
+  }
+
+  .Overview, .aboutMe {
+    width: 90%;
+    font-size: 1em;
+    height: auto;
+  }
+
+
+  .bottomContainer {
+    flex-direction: column;
+  }
+
+  .container-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item-skill {
+    width: 70px;
+    height: 70px;
+    margin-left: 0;
+  }
+
+  .projects {
+    margin: 2%;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title{
+    font-size: 1em;
+  }
+
+  .details {
+    font-size: 0.8em;
+    margin: 1em;
+    align-items: center;
+  }
+
+  .details ul li {
+    font-size: 1em;
+    padding: 2px;
+  }
+
+  form input, form textarea {
+    width: 80%;
+  }
+
+  .contact{
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    font-size: 1em;
+    height: auto;
+    padding: 2%;
+  }
+
+  footer img {
+    width: 10vw;
+  }
+}
+
