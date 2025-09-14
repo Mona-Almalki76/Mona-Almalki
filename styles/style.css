@@ -1,0 +1,510 @@
+body {
+  margin: 0;
+  /* padding: 5%; */
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* code of video: https://github.com/MiladiCode/Animated-Portfolio */
+.back-vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img {
+  width: 30vw;
+  max-width: 500px;
+}
+
+header h1 {
+  color: white;
+  font-weight: lighter;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  text-align: left;
+}
+h1 span {
+  font-weight: bold;
+  color: rgb(64, 211, 216);
+  font-family: "silkscreen", sans-serif;
+  font-weight: lighter;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  max-height: 100vh;
+}
+h2 {
+  color: white;
+  font-size: 3rem;
+  text-align: left;
+}
+h2 span {
+  background: linear-gradient(
+    90deg,
+    rgb(208, 209, 130) 0%,
+    rgb(141, 194, 187) 50%,
+    rgb(56, 230, 246) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Overview {
+  color: white;
+  width: 30em;
+  font-size: 1.5em;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+.aboutMe {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  font-size: 1.3em;
+  font-weight: bold;
+  max-height: 100vh;
+  margin: 5%;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(64, 211, 216);
+  font-family: "silkscreen", sans-serif;
+  text-shadow: 2px 2px 30px #0ff;
+}
+.eduDegree {
+  font-weight: bold;
+  color: #d0d182;
+}
+
+.Trainee {
+  padding-left: 1em;
+  line-height: 1.5em;
+}
+
+/* https://www.w3schools.com/cssref/sel_marker.php */
+.Trainee li::marker {
+  color: #d0d182;
+  font-size: 1.5em;
+}
+
+/* Font Family ------------------------------------------*/
+.shadows-into-light-regular {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bottomContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4%;
+}
+
+/* From Uiverse.io by Cobp */
+/* https://uiverse.io/Cobp/horrible-quail-18 */
+.container-items {
+  display: flex;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.item-skill {
+  position: relative;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border: 0.5px solid rgb(195, 195, 195);
+  outline: none;
+  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-left: -25px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    transform: scale(1.2);
+    pointer-events: none;
+    transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(skill-name);
+    left: 50%;
+    bottom: 105%;
+    font-size: 1em;
+    line-height: 12px;
+    transform: translateX(-50%);
+    padding: 2px 0.25rem;
+    background-color: #d0d182;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  }
+
+  &:hover {
+    transform: scale(1.5);
+    z-index: 99999;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:active::after {
+    transform: scale(1.1);
+  }
+}
+
+.item-skill:hover + * {
+  transform: scale(1.3);
+  z-index: 9999;
+}
+
+.item-skill:hover + * + * {
+  transform: scale(1.15);
+  z-index: 999;
+}
+
+.item-skill:has(+ *:hover) {
+  transform: scale(1.3);
+  z-index: 9999;
+}
+
+.item-skill:has(+ * + *:hover) {
+  transform: scale(1.15);
+  z-index: 999;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 5%;
+}
+/* From Uiverse.io by joe-watson-sbf */
+/* https://uiverse.io/joe-watson-sbf/rude-shrimp-21 */
+.card {
+  width: 100%;
+  height: 70%;
+  border-radius: 4px;
+  display: flex;
+  gap: 5px;
+  padding: 0.4em;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.project {
+  height: auto;
+  flex: 1;
+  overflow-y: auto;
+  background: #21212100;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.9s;
+  box-shadow: 2px 2px 30px #d0d182;
+}
+
+.project:hover {
+  flex: 7;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.title {
+  font-size: 2em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+  text-transform: uppercase;
+  color: #d0d182;
+  font-family: "silkscreen", sans-serif;
+  text-shadow: 2px 2px 50px #d0d182;
+  letter-spacing: 0.1em;
+}
+
+.details {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.project:hover .title {
+  display: none;
+}
+
+.project:hover .details {
+  display: flex;
+  height: 100%;
+  margin: 3%;
+  margin: 4em;
+}
+.details ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+}
+
+.details ul li {
+  border: 1px solid rgb(250, 255, 255);
+  padding: 4px;
+  border-radius: 10%;
+  font-size: 1em;
+  margin-bottom: 5%;
+}
+
+.details .projectImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details video {
+  max-width: 100%;
+  height: auto;
+}
+
+.details h2 {
+  color: #d0d182;
+  font-family: "silkscreen", sans-serif;
+  text-shadow: 2px 2px 50px #d0d182;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.contact {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 2em;
+  max-height: 100vh;
+  color: #d0d182;
+  font-family: "silkscreen", sans-serif;
+  text-shadow: 2px 2px 50px #d0d182;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2vh;
+  align-items: center;
+}
+
+input {
+  width: 27vw;
+  height: 3vh;
+  border: 3px solid #d0d182;
+  border-radius: 8px;
+  font-size: 0.7em;
+  outline: none;
+  display: flex;
+}
+
+input:focus {
+  box-shadow: 2px 2px 30px #d0d182;
+}
+
+textarea {
+  width: 27vw;
+  height: 15vh;
+  border: 3px solid #d0d182;
+  border-radius: 8px;
+  font-size: 0.7em;
+  outline: none;
+  display: flex;
+}
+textarea:focus {
+  box-shadow: 2px 2px 30px #d0d182;
+}
+
+#my-form-button {
+  width: auto;
+  height: auto;
+  border: 3px solid #d0d182;
+  border-radius: 8px;
+  color: #000000;
+  font-family: "silkscreen", sans-serif;
+  background-color: #d0d182;
+  font-size: 0.7em;
+}
+
+#my-form-button:hover {
+  box-shadow: 4px 4px 50px #d0d182;
+  background-color: #f8f5b8;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  height: 5%;
+  background-color: #ebebc36e;
+  padding: 0.5%;
+  font-size: larger;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+footer img {
+  width: 3vw;
+  border-radius: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+
+/* mobile devices */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.9em;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin: 5%;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .heading{
+    font-size: 2rem;
+  }
+
+  .Overview, .aboutMe {
+    width: 90%;
+    font-size: 1em;
+    height: auto;
+  }
+
+
+  .bottomContainer {
+    flex-direction: column;
+  }
+
+  .container-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item-skill {
+    width: 70px;
+    height: 70px;
+    margin-left: 0;
+  }
+
+  .projects {
+    margin: 2%;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title{
+    font-size: 1em;
+  }
+
+  .details {
+    font-size: 0.8em;
+    margin: 1em;
+    align-items: center;
+  }
+
+  .details ul li {
+    font-size: 1em;
+    padding: 2px;
+  }
+
+  form input, form textarea {
+    width: 80%;
+  }
+
+  .contact{
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    font-size: 1em;
+    height: auto;
+    padding: 2%;
+  }
+
+  footer img {
+    width: 10vw;
+  }
+}
+
